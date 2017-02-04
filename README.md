@@ -1,2 +1,2 @@
 # rickify
-rickify a sentence !
+my most useful project so far
