@@ -8,18 +8,23 @@ import os
 
 def sip_some_wodka(a):
     r = random.random()
-    if r < 0.9:
+    if r < 0.:
         return a
-    a.insert(random.randint(1, len(a)), '*takes a sip of wodka*')
+    alcools = [
+        'whisky',
+        'wodka',
+    ]
+    a.insert(random.randint(1, len(a)), '*takes a sip of %s*' % alcools[random.randint(0, len(alcools) - 1)])
     return a
 
 def add_a_burp(a):
     res = []
-    for word in a:
+    for word in a[1:]:
         r = random.random()
         if r < 0.1:
             res.append('*burp*')
         res.append(word)
+    res.insert(0, a[0])
     return res
 
 def double_first_letter(a):
