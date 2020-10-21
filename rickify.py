@@ -43,7 +43,7 @@ def rickify(s):
         add_a_burp,
         sip_some_wodka,
     ]
-    a = filter(None, s.split(' '))
+    a = list(filter(None, s.split(' ')))
     for f in funcs:
         a = f(a)
     return ' '.join(a)
